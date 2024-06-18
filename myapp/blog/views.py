@@ -4,7 +4,8 @@ from django.urls import reverse
 
 # Create your views here.
 def index(request):
-    return render(request,"index.html")
+    blog_title="Today's Post"
+    return render(request,"index.html", {'blog_title':blog_title})
 
 def post(request, post_id):
     return render(request,"details.html")
